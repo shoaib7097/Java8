@@ -1,0 +1,101 @@
+================
+Interface changes
+================
+
+-> Interface means collection of abstract methods
+
+Note: The method which doesn't contain body is called as abstract method
+
+-> A class can implement interface using "implements"
+
+-> When a class is implementing interface its mandatory that class should implement all abstract methods of that interface otherwise class can't be compile.
+
+=> Here i am taking one interface with one abstract method. All the classes which are implementing that interface should override interface method(s).
+
+
+interface Vehicle 
+{
+	public abstract void startVehicle ( );
+}
+
+class Car implements Vehicle 
+{
+	public void startVehicle ( ) 
+	{
+		// logic to start car
+	}
+}
+
+class Bus implements Vehicle 
+{
+	public void startVehicle ( ) 
+	{
+		// logic to start  bus
+	}
+}
+
+class Bike implements Vehicle 
+{
+	public void startVehicle ( ) 
+	{
+		// logic to start  bike
+	}
+}
+
+=> If we add new method in interface then Car, Bike and Bus will fail at compile time.
+
+=> To overcome above problem we will use Default & Static methods
+
+
+
+1) Interface can have concrete methods from 1.8v
+
+2) Interface concrete method should be default or static
+
+3) interface default methods we can override in impl classes
+
+4) interface static methods we can't override in impl classes
+
+5) We can write multiple default & static methods in interface
+
+6) Default & Static method introduced to provide backward compatibility
+
+
+Ex:  forEach ( ) method added in java.util.Iterable interface as default method in 1.8v
+
+
+===========
+interface Vehicle 
+{
+	public void start();
+
+	public default void m1() 
+	{
+
+	}
+
+	public default void m2() 
+	{
+
+	}
+
+	public static void clean() 
+	{
+		System.out.println("cleaning completed...");
+	}
+}
+
+public class Car implements Vehicle 
+{
+	public void start() 
+	{
+		System.out.println("car started...");
+	}
+
+	public static void main(String[] args) 
+	{
+		Car c = new Car();
+		Vehicle.clean();
+		c.start();
+	}
+}
