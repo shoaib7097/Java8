@@ -1,0 +1,36 @@
+==================
+Functional Interfaces
+==================
+
+-> The interface which contains only one abstract method is called as Functional Interface
+
+-> Functional Interfaces are used to invoke Lambda expressions
+
+-> Below are some predefined functional interfaces
+
+			Runnable ------------> run ( ) method
+
+			Callable ----------> call ( ) method
+
+			Comparable -------> compareTo ( )
+
+-> To represent one interface as a Functional Interface, we will use the @FunctionalInterface annotation.
+
+
+@FunctionalInterface
+public interface MyInterface {
+	public void m1( );
+}
+
+Note: When we write @FunctionalInterface(annotation) then our compiler will check interface contains only one abstract method or not.
+
+
+-> In Java 8 several predefined Functional interfaces got introduced they are
+
+	1) Predicate & BiPredicate
+	2) Consumer & BiConsumer
+	3) Supplier
+	4) Function & BiFunction
+
+
+-> The above interfaces are provided in java.util.function package
