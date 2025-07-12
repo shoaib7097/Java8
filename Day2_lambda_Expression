@@ -1,0 +1,83 @@
+=====================
+Lambda Expressions
+====================
+
+-> Introduced in java 1.8v
+
+-> Java is called as an Object-oriented programming language. Everything will be represented using Classes and Objects.
+
+-> From 1.8v onwards Java is also called as Functional Programming Language.
+
+-> In OOP language classes & Objects are main entities. We need to write methods inside the class only.
+
+-> Functional Programming means everything will be represented in the form functions. Functions can exist outside of the class. Functions can be stored in a reference variable. A function can be passed as a parameter to other methods.
+
+-> Lambda Expression was introduced in Java to enable Functional Programming.
+
+==============
+What is Lambda
+==============
+
+-> Lambda is an anonymous function
+
+		- No Name
+		- No Modifier
+		- No Return Type
+
+Ex:-1
+Normal method:
+public void m1 ( )
+{
+	s.o.p("hi");
+}
+ lambda expression:
+ ( ) -> { s.o.p ("hi") }
+
+Note: When we have a single line in body, then curly braces are optional
+
+ ( ) -> s.o.p ("hi");
+
+Ex:-2
+Normal method:
+public void add (int a, int b)
+{
+	s.o.p(a+b);
+}
+lambda expression
+( int a, int b)  -> { s.o.p (a+b) } ;
+
+		(or)
+
+(int a, int b) -> s.o.p (a+b);
+
+		(or)
+
+Lambda Expression : (a, b) -> s.o.p(a+b);
+
+
+Ex:-3
+Normal method:
+public int getLength (String name) 
+{
+	return name.length ( );
+}
+
+(String name) -> { return name.length ( ) };
+
+(String name) -> return name.length ( ) ;
+
+(name) -> return name.length ( );
+
+Lambda Expression : name -> name.length ( ) ;
+
+
+Ex:-4
+
+public Double getEmpSalary (Employee emp) {
+
+	return emp.getSalary ( );
+
+}
+
+Lambda Expression : emp -> emp.getSalary ( );
+Note:If there is two or more parameters than write inside brackets.
