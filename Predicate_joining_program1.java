@@ -46,6 +46,7 @@ public class Predicate_joining_program1
     
     Predicate<Predicate_joining_program1> p3=p1.and(p2);//predicate joining 
     //We can add any number of predicate like p3=p1.and(p2).add(p4).add(p5)
+    //If we want output on based of any one condition true than we should use or() ex=p1.or(p2);
     
     for(Predicate_joining_program1 ObjectData:al)
     {
