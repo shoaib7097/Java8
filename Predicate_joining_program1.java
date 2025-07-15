@@ -8,9 +8,12 @@ Predicate Joining
 
 -> To combine multiple predicates we will use Predicate Joining
 
+In predicate only test() is abstract method
+
 and ( ) method
 
 or ( ) method
+and(),or() method are default method
 
 */
 
