@@ -9,7 +9,7 @@ public class Day4_Function_Functional_Interface
 
     -> Function is predefined functional interface
 
-   -> Funcation interface having one abstract method i.e apply(T r)
+   -> Function interface having one abstract method i.e apply(T r)
 
 		interface Function<R,T>
 		{
@@ -21,7 +21,6 @@ public class Day4_Function_Functional_Interface
 
 	public static void main(String[] args) 
 	{
-
 		Function<String, Integer> f = (name) -> name.length();
 
 		System.out.println(f.apply("ashokit"));
